@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Online Exam System</title>
+    <link rel="icon" href="login.png">
+    <link rel="stylesheet" href="Register.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap">
+    <script >
+      function validation(){
+        var fn =document.forms["myForm"]["fname"].value;
+        if(fn==""){
+          alert("Please filled your Full Name");
+          return false;
+        }
+        var un =document.forms["myForm"]["username"].value;
+        if(un==""){
+          alert("Please filled your Username");
+          return false;
+        }
+        var el =document.forms["myForm"]["email"].value;
+        
+        if(el==""){
+          alert("Please filled your Email");
+          return false;
+        }
+        var mn =document.forms["myForm"]["mobile"].value;
+        if(mn==""){
+          alert("Please filled your Mobile Number");
+          return false;
+        }
+        var pw =document.forms["myForm"]["pass"].value;
+        if(pw==""){
+          alert("Please filled your Password");
+          return false;
+        }
+        var cp =document.forms["myForm"]["cpass"].value;
+        if(cp==""){
+          alert("Please filled your Confirm Password");
+          return false;
+        }
+        var gen =document.forms["myForm"]["gender"].value;
+        if(gen==""){
+          alert("Please select your gender");
+          return false;
+        }
+        var checkp =document.getElementById('password').value;
+        var checkc =document.getElementById('confirm').value;
+        if(checkp!=checkc){
+          alert("Password does not matched");
+          return false;
+        }
+        else{
+          alert("Password Matched");
+          
+        }
+      }
+    </script>
+   
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form name="myForm" method="POST" onsubmit="return validation()">
+        <div class="user-details">
+          <div class="input-box">
+            <i class="fa fa-user" ></i>
+            <span>Full Name</span>
+            <input type="text" name="fname" autocomplete="off" placeholder="First Middle Last" >
+          </div>
+          <div class="input-box">
+            <i class="fa fa-user" ></i>
+            <span>Username</span>
+            <input type="text" name="username" autocomplete="off" pattern="[A-Za-z0-9]{1,15}" title="Enter capital, small letters and digits" placeholder="Enter Your username" >
+          </div>
+          <div class="input-box">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <span>Email</span>
+            <input type="email" name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter Valid Email" autocomplete="off" placeholder="Enter Your Email" >
+          </div>
+          <div class="input-box">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span>Phone Number</span>
+            <input type="tel" name="mobile" pattern="[789][0-9]{9}" title="Starting with number 7/8/9 " autocomplete="off" placeholder="Enter 10 digit number" >
+          </div>
+          <div class="input-box">
+            <i class="fa fa-key" aria-hidden="true"></i>
+            <span>Password</span>
+            <input type="password" name="pass" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least 1 uppercase, 1 lowercase lettter, 1digit, and 8 or more character " autocomplete="off" placeholder="Enter your password" >
+            </div>
+          <div class="input-box">
+            <i class="fa fa-key" aria-hidden="true"></i>
+            <span>Confirm Password</span>
+            <input type="password" name="cpass" id="confirm" autocomplete="off" placeholder="Confirm your password" >
+          </div>
+          </div>
+          <div class="gender-details">
+            <i class="fa fa-venus" aria-hidden="true"></i>
+            <input type="radio" name="gender" id="dot-1" >
+            <input type="radio" name="gender" id="dot-2" >
+            <input type="radio" name="gender" id="dot-3" >
+            <span class="gender-title">Gender</span>
+            <div class="category" >
+              <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="gender" >Male</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="gender">Female</span>
+            </label>
+            <label for="dot-3">
+              <span class="dot three"></span>
+              <span class="gender">Transgender</span>
+              </label>
+            </div>
+          </div>      
+          <div class="button" >
+          <input type="submit"  value="Register" >
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
