@@ -1,0 +1,94 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  
+ }
+ * {
+    box-sizing: border-box;
+ }
+ h1 {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     color: white;
+ }
+ form {
+    border: 1px solid rgb(182, 180, 180);
+    padding: 20px;
+    width: 800px;
+    background-color: white;
+ }
+ input {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    height: 45px;
+    margin: 0px 0px 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 17px;
+ }
+ button {
+    margin: 10px auto 30px;
+    display: table;
+    font-size: 20px;
+    padding: 10px 30px;
+    background-color: #4caf50;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+ }
+ button:hover {
+    opacity: 0.8;
+ }
+ a{
+     text-decoration: none;
+ }
+ .Social a button.google-btn,
+ .Social a button.facebook-btn,
+ .Social a button.instagram-btn,
+ .Social a button.linkdin-btn {
+    width: 100%;
+    font-size: 18px;
+    margin: 0px 0px 10px;
+    
+ }
+ .Social  button.google-btn {
+    background-color: #fd2626;
+ }
+ .Social button.facebook-btn {
+    background-color: #3f68be;
+ }
+ .Social button.instagram-btn {
+    background-color: #fd3426;
+ }
+ .Social button.linkdin-btn {
+    background-color: #5b3fbe;
+ }
+ .Social {
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+    margin-top: 30px;
+ }
+ .Social button i {
+    margin-right: 5px;
+    font-size: 20px;
+ }
+ @media (max-width: 1000px) {
+    form {
+       width: 100%;
+    }
+ }
+ label{
+     font-size: 20px;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+ .btn{
+    width: 50%;
+    background: wheat;
+    border: 2px solid #4caf50;
+    color: #4caf50;
+    padding: 5px;
+    cursor: pointer;
+ }
+ .btn:hover {
+   opacity: 0.8;
