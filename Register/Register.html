@@ -50,19 +50,19 @@
       background: linear-gradient(135deg, #71b7e6, #9b59b6);
     }
 
-    .content form .user-details {
+    .content  .user-details {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       margin: 20px 0 12px 0;
     }
 
-    form .user-details .input-box {
+     .user-details .input-box {
       margin-bottom: 15px;
       width: calc(100% / 2 - 20px);
     }
 
-    form .input-box span.details {
+     .input-box span.details {
       display: block;
       font-weight: 500;
       margin-bottom: 5px;
@@ -85,25 +85,25 @@
       border-color: #9b59b6;
     }
 
-    form .gender-details .gender-title {
+     .gender-details .gender-title {
       font-size: 20px;
       font-weight: 500;
     }
 
-    form .category {
+     .category {
       display: flex;
       width: 80%;
       margin: 14px 0;
       justify-content: space-between;
     }
 
-    form .category label {
+     .category label {
       display: flex;
       align-items: center;
       cursor: pointer;
     }
 
-    form .category label .dot {
+     .category label .dot {
       height: 18px;
       width: 18px;
       border-radius: 50%;
@@ -120,16 +120,16 @@
       border-color: #d9d9d9;
     }
 
-    form input[type="radio"] {
+     input[type="radio"] {
       display: none;
     }
 
-    form .button {
+     .button {
       height: 45px;
       margin: 35px 0
     }
 
-    form .button input {
+     .button input {
       height: 100%;
       width: 100%;
       border-radius: 5px;
@@ -143,8 +143,8 @@
       background: linear-gradient(135deg, #71b7e6, #9b59b6);
     }
 
-    form .button input:hover {
-      /* transform: scale(0.99); */
+     .button input:hover {
+      /* trans: scale(0.99); */
       background: linear-gradient(-135deg, #71b7e6, #9b59b6);
     }
 
@@ -153,16 +153,16 @@
         max-width: 100%;
       }
 
-      form .user-details .input-box {
+       .user-details .input-box {
         margin-bottom: 15px;
         width: 100%;
       }
 
-      form .category {
+       .category {
         width: 100%;
       }
 
-      .content form .user-details {
+      .content  .user-details {
         max-height: 300px;
         overflow-y: scroll;
       }
@@ -196,38 +196,38 @@
   </style>
   <script>
     function validation() {
-      var fn = document.forms["myForm"]["fname"].value;
+      var fn = document.getElementsByName("fname").value;
       if (fn == "") {
         alert("Please filled your Full Name");
         return false;
       }
-      var un = document.forms["myForm"]["username"].value;
+      var un = document.getElementsByName("username").value;
       if (un == "") {
         alert("Please filled your Username");
         return false;
       }
-      var el = document.forms["myForm"]["email"].value;
+      var el = document.getElementsByName("email").value;
 
       if (el == "") {
         alert("Please filled your Email");
         return false;
       }
-      var mn = document.forms["myForm"]["mobile"].value;
+      var mn = document.getElementsByName("mobile").value;
       if (mn == "") {
         alert("Please filled your Mobile Number");
         return false;
       }
-      var pw = document.forms["myForm"]["pass"].value;
+      var pw = document.getElementsByName("pass").value;
       if (pw == "") {
         alert("Please filled your Password");
         return false;
       }
-      var cp = document.forms["myForm"]["cpass"].value;
+      var cp = document.getElementsByName("cpass").value;
       if (cp == "") {
         alert("Please filled your Confirm Password");
         return false;
       }
-      var gen = document.forms["myForm"]["gender"].value;
+      var gen = document.getElementsByName("gender").value;
       if (gen == "") {
         alert("Please select your gender");
         return false;
@@ -242,6 +242,7 @@
         alert("Password Matched");
 
       }
+      window.location.href = "";
     }
   </script>
 
@@ -251,7 +252,7 @@
   <div class="container">
     <div class="title">Registration</div>
     <div class="content">
-      <form name="myForm">
+      <!-- <form name="myForm"> -->
         <div class="user-details">
           <div class="input-box">
             <i class="fa fa-user"></i>
@@ -311,10 +312,10 @@
           </div>
         </div>
         <div class="button">
-          <a href="C:\Users\adity\Documents\GitHub\Online_Exam_System\Welcome_Page.html"><button>Register</button></a>
+          <a href="C:\Users\adity\Documents\GitHub\Online_Exam_System\Welcome_Page.html"><button onclick="validation()">Register</button></a>
 
         </div>
-      </form>
+      <!-- </form> -->
     </div>
   </div>
 
